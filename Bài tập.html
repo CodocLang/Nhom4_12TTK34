@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập - Nhóm 4</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
+        header { background: #2c3e50; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 1.5rem; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: #3498db; }
+        .container { max-width: 900px; margin: 3rem auto; padding: 0 20px; }
+        h2 { text-align: center; margin-bottom: 2rem; color: #2c3e50; }
+        .table-container { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 15px; border-bottom: 1px solid #ddd; }
+        th { background-color: #3498db; color: white; }
+        tr:hover { background-color: #f1f1f1; }
+        a.link-bai { color: #3498db; text-decoration: none; font-weight: 500; }
+        a.link-bai:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 1.5rem; background: #2c3e50; color: white; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Website Nhóm 4</h1>
+        <nav>
+            <a href="index.html">Trang Chủ</a>
+            <a href="thanh-vien.html">Thành Viên</a>
+            <a href="bai-tap.html" class="active">Bài Tập</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Danh Sách Bài Tập Của Nhóm</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên Bài Tập</th>
+                        <th>Mô Tả</th>
+                        <th>Trạng Thái</th>
+                        <th>Liên Kết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Bài tập 1: Giao diện HTML/CSS cơ bản</td>
+                        <td>Xây dựng layout giới thiệu nhóm</td>
+                        <td>Hoàn thành</td>
+                        <td><a href="#" class="link-bai">Xem chi tiết</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Bài tập 2: JavaScript tương tác</td>
+                        <td>Thêm hiệu ứng và form đăng nhập</td>
+                        <td>Hoàn thành</td>
+                        <td><a href="#" class="link-bai">Xem chi tiết</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bài tập lớn: Hoàn thiện Website</td>
+                        <td>Đưa sản phẩm lên GitHub Pages</td>
+                        <td>Đang thực hiện</td>
+                        <td><a href="#" class="link-bai">Xem chi tiết</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Nhóm 4. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
