@@ -36,45 +36,86 @@
 
     <div class="container">
         <h2>Danh Sách Bài Tập Của Nhóm</h2>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>STT</th>
-                        <th>Bài Tập</th>
-                        <th>Mô Tả</th>
-                        <th>Trạng Thái</th>
-                        <th>Liên Kết</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table">
-                        <td>1</td>
-                        <td>Bài 1</td>
-                        <td>Làm quen với trí tuệ nhân tạo</td>
-                        <td>Đang làm...</td>
-                        <td><a href="" class="link-bai">Ở đây--></a></td>
-                    </tr><tr class="table">
-                        <td>2</td>
-                        <td>Bài 2</td>
-                        <td>Trí tuệ nhân tạo trong khoa học và đời sống</td>
-                        <td>Đang làm...</td>
-                        <td><a href="" class="link-bai">Ở đây--></a></td>
-                    </tr>
-                    <tr class="table">
-                        <td>3</td>
-                        <td>Bài 3</td>
-                        <td>Một số thiết bị mạng thông dụng</td>
-                        <td>Xong rồi!</td>
-                        <td><a href="https://docs.google.com/document/d/1wIej7mRRVgGqASQ-YF3U95NkBMvhDdPr_MwUQXo6tQ8/edit?usp=sharing" class="link-bai">Ở đây--></a></td>
-                    </tr>
-                    <tr class="table">
-                        <td>4</td>
-                        <td>Bài 4</td>
-                        <td>Giao thức mạng</td>
-                        <td>Xong rồi!</td>
-                        <td><a href="https://docs.google.com/document/d/15jdQgmPKOkDMuCk1sZa13OD8Wo2JlAFWw6L_afv9_7E/edit?usp=sharing" class="link-bai">Ở đây--></a></td>
-                    </tr>
+       <div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Bài Tập</th>
+                <th>Mô Tả</th>
+                <th>Trạng Thái</th>
+                <th>Liên Kết</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table">
+                <td>1</td>
+                <td>Bài 1</td>
+                <td>Làm quen với trí tuệ nhân tạo</td>
+                <td>Đang làm...</td>
+                <td><a href="" class="link-bai">Ở đây--></a></td>
+            </tr>
+            <tr class="table">
+                <td>2</td>
+                <td>Bài 2</td>
+                <td>Trí tuệ nhân tạo trong khoa học và đời sống</td>
+                <td>Đang làm...</td>
+                <td><a href="" class="link-bai">Ở đây--></a></td>
+            </tr>
+
+            <!-- BÀI 3 -->
+            <tr class="table">
+                <td>3</td>
+                <td>Bài 3</td>
+                <td>Một số thiết bị mạng thông dụng</td>
+                <td>Xong rồi!</td>
+                <td>
+                    <!-- Ô checkbox ẩn giữ trạng thái mở/đóng của Bài 3 -->
+                    <input type="checkbox" id="toggle-bai3" class="toggle-checkbox">
+                    <!-- Nút bấm nhãn gắn với checkbox, bấm vào sẽ kích hoạt trượt -->
+                    <label for="toggle-bai3" class="btn-mo-doc">Xem tài liệu ▼</label>
+                </td>
+            </tr>
+            <!-- HÀNG RIÊNG CHỨA KHUNG DRIVE DOC CHO BÀI 3 -->
+            <tr class="hang-chua-doc">
+                <td colspan="5" class="cell-doc">
+                    <div class="khung-truot-doc">
+                        <div class="noi-dung-iframe">
+                            <iframe src="https://docs.google.com/document/d/e/2PACX-1vQ.../pub?embedded=true" width="100%" height="500px"></iframe>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- BÀI 4 -->
+            <tr class="table">
+                <td>4</td>
+                <td>Bài 4</td>
+                <td>Giao thức mạng</td>
+                <td>Xong rồi!</td>
+                <td>
+                    <!-- Ô checkbox ẩn giữ trạng thái mở/đóng của Bài 4 -->
+                    <input type="checkbox" id="toggle-bai4" class="toggle-checkbox">
+                    <!-- Nút bấm nhãn cho Bài 4 -->
+                    <label for="toggle-bai4" class="btn-mo-doc">Xem tài liệu ▼</label>
+                </td>
+            </tr>
+            <!-- HÀNG RIÊNG CHỨA KHUNG DRIVE DOC CHO BÀI 4 -->
+            <tr class="hang-chua-doc">
+                <td colspan="5" class="cell-doc">
+                    <div class="khung-truot-doc">
+                        <div class="noi-dung-iframe">
+                            <iframe src="https://docs.google.com/document/d/e/2PACX-1vQ.../pub?embedded=true" width="100%" height="500px"></iframe>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<style>
+
                     <tr class="table">
                         <td>5</td>
                         <td>Bài 5</td>
@@ -94,7 +135,20 @@
                         <td>Bài 7</td>
                         <td>HTML và cấu trúc trang web</td>
                         <td>Xong rồi!</td>
-                        <td><a href="https://docs.google.com/document/d/12quQbemHX3l21kAaG5NyKF-doilrtMPv3rRJdM6uxcI/edit?usp=sharing" class="link-bai">Ở đây--></a></td>
+                        <td>
+                    <input type="checkbox" id="toggle-bai7" class="toggle-checkbox">
+                    <label for="toggle-bai7" class="btn-mo-doc">Xem tài liệu ▼</label>
+                </td>
+            </tr>
+            <tr class="hang-chua-doc">
+                <td colspan="5" class="cell-doc">
+                    <div class="khung-truot-doc">
+                        <div class="noi-dung-iframe">
+                            <iframe src="https://docs.google.com/document/d/12quQbemHX3l21kAaG5NyKF-doilrtMPv3rRJdM6uxcI/edit?usp=sharing" width="100%" height="500px"></iframe>
+                        </div>
+                    </div>
+                </td>
+            </tr>
                     </tr>
                     <tr class="table">
                         <td>8</td>
