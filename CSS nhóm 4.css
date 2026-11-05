@@ -1,0 +1,56 @@
+
+.toggle-checkbox {
+    display: none;
+}
+.btn-mo-doc {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    user-select: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+.btn-mo-doc:hover {
+    background-color: #2980b9;
+}
+#toggle-bai3:checked ~ .btn-mo-doc,
+#toggle-bai4:checked ~ .btn-mo-doc,
+#toggle-bai7:checked ~ .btn-mo-doc {
+    background-color: #e74c3c; 
+}
+.hang-chua-doc {
+    background-color: #f8f9fa;
+}
+.cell-doc {
+    padding: 0 !important;
+    border: none;
+}
+
+.khung-truot-doc {
+    max-height: 0;               
+    overflow: hidden;            
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); 
+}
+
+.noi-dung-iframe {
+    padding: 20px;
+}
+
+.noi-dung-iframe iframe {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: #fff;
+    display: block;
+}
+
+
+#toggle-bai3:checked ~ .hang-chua-doc .khung-truot-doc,
+#toggle-bai4:checked ~ .hang-chua-doc .khung-truot-doc,
+#toggle-bai7:checked ~ .hang-chua-doc .khung-truot-doc {
+    max-height: 700px; 
+}
+</style>
