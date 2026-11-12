@@ -11,7 +11,10 @@ body {
     color: #333333;
     padding: 40px 20px;
 }
-
+ nav a { 
+     color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.3s; 
+ }
+ nav a:hover, nav a.active { color: #3498db; }
 .table-container {
     max-width: 950px;
     margin: 0 auto;
