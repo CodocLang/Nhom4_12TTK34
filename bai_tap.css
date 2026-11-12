@@ -1,14 +1,136 @@
- <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-        header { background: #2c3e50; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        header h1 { font-size: 1.5rem; }
-        .container { max-width: 900px; margin: 3rem auto; padding: 0 20px; }
-        h2 { text-align: center; margin-bottom: 2rem; color: #2c3e50; }
-        .table-container { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        table { width: 100%; border-collapse: collapse; text-align: left; text-decoration: strong}
-        th, td { padding: 15px; border-bottom: 1px solid #ddd; }
-        th { background-color: #3498db; color: white; }
-        tr:hover { background-color: #f1f1f1; }
-        footer { text-align: center; padding: 1.5rem; background: #2c3e50; color: white; margin-top: 4rem; }
-  </style>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    padding: 40px 20px;
+}
+
+.table-container {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+th {
+    background-color: #1e293b;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr.table {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr.table:hover {
+    background-color: #f8fafc;
+}
+
+/* --- 2. Nút bấm & Hiệu ứng mũi tên --- */
+.toggle-checkbox {
+    display: none;
+}
+
+.btn-mo-doc {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    user-select: none;
+    transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.btn-mo-doc:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-mo-doc:active {
+    transform: scale(0.96);
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- 3. Hàng chứa khung trượt Google Docs --- */
+.hang-chua-doc {
+    background-color: #f8fafc;
+}
+
+.cell-doc {
+    padding: 0 !important;
+    border-bottom: none; /* Ẩn viền dưới khi khung đang đóng */
+}
+
+.khung-truot-doc {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.noi-dung-iframe {
+    padding: 20px;
+}
+
+.noi-dung-iframe iframe {
+    width: 100%;
+    height: 520px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    display: block;
+}
+
+/* --- 4. CƠ CHẾ TOGGLE ĐÃ SỬA LỖI --- */
+
+/* Xoay mũi tên và đổi màu nút sang đỏ khi ô checkbox ngay trước label được chọn */
+.toggle-checkbox:checked + .btn-mo-doc .arrow {
+    transform: rotate(180deg);
+}
+
+.toggle-checkbox:checked + .btn-mo-doc {
+    background-color: #dc2626;
+}
+
+/* Dùng :has() để tìm hàng <tr> chứa checkbox đang bật, sau đó mở rộng hàng .hang-chua-doc ngay liền kề (+) */
+tr.table:has(.toggle-checkbox:checked) + tr.hang-chua-doc .cell-doc {
+    border-bottom: 1px solid #edf2f7;
+}
+
+tr.table:has(.toggle-checkbox:checked) + tr.hang-chua-doc .khung-truot-doc {
+    max-height: 600px;
+    opacity: 1;
+}
+</style>
