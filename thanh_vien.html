@@ -5,21 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thành Viên - Nhóm 4</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-        header { background: #2c3e50; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        header h1 { font-size: 1.5rem; }
-        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.3s; }
-        nav a:hover, nav a.active { color: #3498db; }
-        div a { color: blue; text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.3s; }
-        .container { max-width: 1000px; margin: 3rem auto; padding: 0 20px; }
-        h2 { text-align: center; margin-bottom: 2rem; color: #2c3e50; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .avatar { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center }
-        .card h3 { margin-bottom: 5px; color: #2c3e50; }
-        .card p { color: #7f8c8d; font-size: 0.9rem; }
-        footer { text-align: center; padding: 1.5rem; background: #2c3e50; color: white; margin-top: 4rem; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* 1. Nền tối chủ đạo */
+        body {
+            background-color: #090d16;
+            color: #e2e8f0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Thanh điều hướng */
+        header {
+            background: #0f172a;
+            border-bottom: 1px solid #1e293b;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            text-shadow: 0 0 8px #00e5ff, 0 0 16px #00e5ff;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ffffff;
+            text-shadow: 0 0 8px #00e5ff, 0 0 15px #00e5ff;
+        }
+
+        /* Khung chính */
+        .container {
+            max-width: 1050px;
+            margin: 3rem auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px #fff, 0 0 15px #bc13fe, 0 0 30px #bc13fe;
+        }
+
+        /* 2. Bố cục 3 trên - 2 dưới căn giữa */
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 28px;
+        }
+
+        /* Mỗi thẻ chiếm ~30% chiều rộng để vừa khít 3 thẻ trên 1 hàng, 2 thẻ dư tự động căn giữa hàng dưới */
+        .card {
+            flex: 0 1 calc(33.333% - 28px);
+            min-width: 260px;
+            background: #111827;
+            padding: 32px 24px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #1e293b;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #00e5ff;
+            box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2);
+        }
+
+        /* Khung Avatar tròn gọn gàng */
+        .avatar {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 18px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1e293b;
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: 2px solid #00e5ff;
+            box-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 3. Hiệu ứng Neon cho Tên thành viên (Xanh Cyan) */
+        .member-name {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #ffffff;
+            margin-bottom: 8px;
+            text-shadow:
+                0 0 4px #ffffff,
+                0 0 10px #00e5ff,
+                0 0 20px #00e5ff;
+            transition: text-shadow 0.3s;
+        }
+
+        a.member-name:hover {
+            text-shadow:
+                0 0 6px #ffffff,
+                0 0 15px #00e5ff,
+                0 0 30px #00e5ff,
+                0 0 45px #00e5ff;
+        }
+
+        /* 4. Hiệu ứng Neon cho Vai trò (Tím hồng nhẹ) */
+        .member-role {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #f8fafc;
+            margin-bottom: 10px;
+            text-shadow:
+                0 0 3px #ffffff,
+                0 0 10px #e879f9,
+                0 0 20px #d946ef;
+        }
+
+        /* 5. Chữ 6:50 màu đỏ Neon sáng nhất */
+        .neon-650 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #ffffff; /* Lõi trắng giúp ánh sáng đỏ rực chói nhất */
+            margin-top: 6px;
+            text-shadow:
+                0 0 4px #ffffff,
+                0 0 10px #ffffff,
+                0 0 20px #ff002b,
+                0 0 35px #ff002b,
+                0 0 55px #ff002b,
+                0 0 80px #ff002b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #0f172a;
+            border-top: 1px solid #1e293b;
+            color: #94a3b8;
+            margin-top: 4rem;
+        }
+
+        /* Tự động xếp 1 cột trên màn hình điện thoại nhỏ */
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -36,36 +203,49 @@
     <div class="container">
         <h2>Danh Sách Thành Viên Nhóm 4</h2>
         <div class="grid">
+            <!-- Hàng 1 - Thẻ 1 -->
             <div class="card">
-                <div class="avatar"><img src="baovu.jpg"></div>
-                <a href="bay_tao.html">Thái Vũ Bảo</a>
-                <p>Vai trò: Trưởng nhóm</p>
-                <p color: red>6:50</p>
+                <div class="avatar"><img src="baovu.jpg" alt="Bảy Tào"></div>
+                <a href="bay_tao.html" class="member-name">Thái Vũ Bảo</a>
+                <p class="member-role">Vai trò: Trưởng nhóm</p>
+                <p class="neon-650">6:50</p>
             </div>
+
+            <!-- Hàng 1 - Thẻ 2 -->
             <div class="card">
                 <div class="avatar">T2</div>
-                <h3>Phùng Quốc Thịnh</h3>
-                <p>Vai trò: Phó nhóm</p>
-                <p color: red>6:50</p>
+                <h3 class="member-name">Phùng Quốc Thịnh</h3>
+                <p class="member-role">Vai trò: Phó nhóm</p>
+                <p class="neon-650">6:50</p>
             </div>
+
+            <!-- Hàng 1 - Thẻ 3 -->
             <div class="card">
                 <div class="avatar">T3</div>
-                <h3>Thảo Phương</h3>
-                <p>Vai trò: Thành viên</p>
+                <h3 class="member-name">Thảo Phương</h3>
+                <p class="member-role">Vai trò: Thành viên</p>
             </div>
+
+            <!-- Hàng 2 - Thẻ 4 (Tự động căn giữa dưới hàng 1) -->
             <div class="card">
                 <div class="avatar">T4</div>
-                <h3>Thúy Hồng</h3>
-                <p>Vai trò: Thành viên</p>
+                <h3 class="member-name">Thúy Hồng</h3>
+                <p class="member-role">Vai trò: Thành viên</p>
             </div>
-             <div class="card">
-                <div class="avatar"><img src="tranthinh.jpg"></div>
-                <a href="thinh_tu.html">Trần Lê Quốc Thịnh</a>
-                <p>Vai trò: Phó nhóm</p>
-                <p color: red>6:50</p>
+
+            <!-- Hàng 2 - Thẻ 5 (Tự động căn giữa dưới hàng 1) -->
+            <div class="card">
+                <div class="avatar"><img src="tranthinh.jpg" alt="Thịnh Tu"></div>
+                <a href="thinh_tu.html" class="member-name">Trần Lê Quốc Thịnh</a>
+                <p class="member-role">Vai trò: Phó nhóm</p>
+                <p class="neon-650">6:50</p>
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Website Nhóm 4 - 12TTK34</p>
+    </footer>
 
 </body>
 </html>
