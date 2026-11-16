@@ -5,23 +5,24 @@
 .btn-mo-doc {
     display: inline-block;
     padding: 6px 12px;
-    background-color: #3498db;
-    color: white;
+    background-color: transparent;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
     user-select: none;
     transition: background-color 0.2s, transform 0.2s;
 }
 .btn-mo-doc:hover {
-    background-color: #2980b9;
+    background-color: transparent;
 }
 #toggle-bai3:checked ~ .btn-mo-doc,
 #toggle-bai4:checked ~ .btn-mo-doc,
 #toggle-bai7:checked ~ .btn-mo-doc,
 #toggle-bai8:checked ~ .btn-mo-doc,
 #toggle-bai9:checked ~ .btn-mo-doc,
-#toggle-bai10:checked ~ .btn-mo-doc{
+#toggle-bai10:checked ~ .btn-mo-doc,
+#toggle-bai11:checked ~ .btn-mo-doc,
+#toggle-bai12:checked ~ .btn-mo-doc{
     background-color: #e74c3c; 
 }
 .hang-chua-doc {
@@ -56,7 +57,9 @@
 #toggle-bai7:checked ~ .hang-chua-doc .khung-truot-doc,
 #toggle-bai8:checked ~ .hang-chua-doc .khung-truot-doc,
 #toggle-bai9:checked ~ .hang-chua-doc .khung-truot-doc,
-#toggle-bai10:checked ~ .hang-chua-doc .khung-truot-doc{
+#toggle-bai10:checked ~ .hang-chua-doc .khung-truot-doc,
+#toggle-bai11:checked ~ .hang-chua-doc .khung-truot-doc,
+#toggle-bai12:checked ~ .hang-chua-doc .khung-truot-doc{
     max-height: 700px; 
 }
 </style>
