@@ -14,14 +14,16 @@
 
         /* 1. Nền tối chủ đạo */
         body {
-            background-color: #090d16;
-            color: #e2e8f0;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
+    /* Phủ lớp tối 75% lên trên ảnh để chữ Neon luôn nổi bật */
+    background: 
+        linear-gradient(rgba(9, 13, 22, 0.75), rgba(9, 13, 22, 0.85)),
+        url('nền minecraft.jpg');
+    
+    background-size: cover;          /* Tự động phóng to/thu nhỏ vừa khít toàn màn hình */
+    background-position: center;     /* Căn giữa bức ảnh */
+    background-attachment: fixed;    /* Giữ cố định ảnh nền khi cuộn trang xuống */
+    background-repeat: no-repeat;    /* Không lặp lại ảnh thành nhiều ô nhỏ */
+             }
         /* Thanh điều hướng */
         header {
             background: #0f172a;
