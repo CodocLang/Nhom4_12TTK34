@@ -123,9 +123,7 @@ h2.neon-title {
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     text-shadow:
-        0 0 4px #ffffff,
-        0 0 20px #aca6f5,
-        0 0 30px #aca6f5;
+      0 0 6px #ffffff, 0 0 16px  #aca6f5, 0 0 32px #aca6f5;
         }
 .btn-neon {
     display: inline-block;
