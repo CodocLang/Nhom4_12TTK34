@@ -118,13 +118,9 @@ h2.neon-title {
     display: inline-block;
     padding: 12px 28px;
     background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #00e5ff;
-    border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 20px;
     letter-spacing: 0.5px;
-    box-shadow: 0 0 12px rgba(0, 229, 255, 0.4), inset 0 0 10px rgba(0, 229, 255, 0.2);
     transition: all 0.3s ease;
     text-shadow:
         0 0 4px #ffffff,
