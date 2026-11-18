@@ -50,19 +50,6 @@ nav a.active {
     color: #ffffff;
     text-shadow: 0 0 8px #00e5ff, 0 0 18px #00e5ff;
 }
-intro p {
-    display: inline-block;
-    padding: 12px 28px;
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #00e5ff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    box-shadow: 0 0 12px rgba(0, 229, 255, 0.4), inset 0 0 10px rgba(0, 229, 255, 0.2);
-    transition: all 0.3s ease;
-        }
 
 footer {
     text-align: center;
@@ -119,6 +106,27 @@ h2.neon-title {
     margin: 0 auto 28px auto;
 }
 
+.intro {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 20px 15px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+.intro p {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #00e5ff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.4), inset 0 0 10px rgba(0, 229, 255, 0.2);
+    transition: all 0.3s ease;
+        }
 .btn-neon {
     display: inline-block;
     padding: 12px 28px;
