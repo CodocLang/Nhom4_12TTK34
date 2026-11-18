@@ -106,25 +106,44 @@ h2.neon-title {
     margin: 0 auto 28px auto;
 }
 
+/* Khung nhỏ gọn đặt lệch sang trái */
 .intro {
-    background: #111827;
-    border: 1px solid #1e293b;
-    border-radius: 16px;
-    padding: 20px 15px;
+    max-width: 480px;                 /* Giới hạn chiều rộng thành khung nhỏ */
+    margin: 20px auto 30px 0;         /* Căn sát lề trái (margin-left: 0, margin-right: auto) */
+    padding: 22px 28px;
+    background-color: rgba(17, 24, 39, 0.7); /* Nền tối bán trong suốt */
+    backdrop-filter: blur(8px);       /* Hiệu ứng kính mờ nhẹ */
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    border-left: 4px solid #00e5ff;   /* Điểm nhấn viền sáng bên cạnh trái */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 229, 255, 0.15);
     text-align: left;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-        }
-.intro p {
-    display: inline-block;
-    padding: 12px 28px;
-    background-color: transparent;
-    text-decoration: none;
-    font-weight: 20px;
+}
+
+/* Tiêu đề h3 màu xanh lam Neon */
+.intro h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
     letter-spacing: 0.5px;
-    transition: all 0.3s ease;
     text-shadow:
-      0 0 6px #ffffff, 0 0 16px  #aca6f5, 0 0 32px #aca6f5;
-        }
+        0 0 4px #ffffff,
+        0 0 10px #ffffff,
+        0 0 20px #00e5ff,
+        0 0 40px #00e5ff;
+}
+
+/* Đoạn văn p màu tím nhạt Neon */
+.intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f8fafc;
+    text-shadow:
+        0 0 3px #ffffff,
+        0 0 10px #d8b4fe,
+        0 0 22px #c084fc;
+}
 .btn-neon {
     display: inline-block;
     padding: 12px 28px;
