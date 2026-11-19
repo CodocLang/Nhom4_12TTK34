@@ -253,7 +253,19 @@ a.member-name:hover {
         0 0 55px #ff002b,
         0 0 80px #ff002b;
 }
-
+.gai {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-top: 6px;
+    text-shadow:
+        0 0 4px #ffffff,
+        0 0 10px #ffffff,
+        0 0 20px #db1bf5,
+        0 0 35px #db1bf5,
+        0 0 55px #db1bf5,
+        0 0 80px #db1bf5;
 /* =========================================================
    6. TRANG BÀI TẬP (BẢNG TỐI NEON & KHUNG DOC TRƯỢT MƯỢT)
    ========================================================= */
