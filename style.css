@@ -172,6 +172,7 @@ h2.neon-title {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    box-sizing: border-box;
 }
 .container h2 {
     text-shadow: 0 0 3px #ffffff, 0 0 10px #214aed, 0 0 20px #2e8abf;
@@ -182,6 +183,7 @@ h2.neon-title {
     background: #111827;
     padding: 30px 22px;
     border-radius: 16px;
+    box-sizing: border-box;
     text-align: center;
     border: 1px solid #1e293b;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
