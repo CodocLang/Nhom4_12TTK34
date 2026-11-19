@@ -171,13 +171,13 @@ h2.neon-title {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 60px;
+    gap: 30px;
 }
 .container h2 {
     text-shadow: 0 0 3px #ffffff, 0 0 10px #214aed, 0 0 20px #2e8abf;
               }
 .card {
-    flex: 0 1 calc(33.333% - 20px);
+    flex: 0 1 calc(33.333% - 10px);
     min-width: 230px;
     background: #111827;
     padding: 30px 22px;
