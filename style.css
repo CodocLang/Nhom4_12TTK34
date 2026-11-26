@@ -7,11 +7,6 @@
 
 body {
     background-color: #090d16;
-    /* Nếu muốn dùng ảnh nền kèm lớp phủ tối, hãy mở khóa 4 dòng dưới đây và thay tên ảnh: */
-    /* background: linear-gradient(rgba(9, 13, 22, 0.78), rgba(9, 13, 22, 0.88)), url('anh-nen.jpg'); */
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* background-attachment: fixed; */
     color: #1947e0;
     line-height: 1.6;
     min-height: 100vh;
@@ -178,7 +173,7 @@ h2.neon-title {
     text-shadow: 0 0 3px #ffffff, 0 0 10px #214aed, 0 0 20px #2e8abf;
               }
 .card {
-    flex: 0 1 calc(33.333% - 10px);
+    flex: 0 1 calc(33.333% - 20px);
     min-width: 200px;
     background: #111827;
     padding: 30px 22px;
