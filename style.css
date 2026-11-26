@@ -291,7 +291,7 @@ table {
 th, td {
     padding: 16px 20px;
     border-bottom: 1px solid #1e293b;
-    text-shadow: 0 0 4px #ffffff, 0 0 9px #17ed13, 0 0 14px #17ed13;
+    text-shadow: 0 0 4px #ffffff, 0 0 9px #00e5ff, 0 0 14px #00e5ff;
 }
 
 th {
